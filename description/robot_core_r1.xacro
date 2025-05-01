@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+	
+    <material name="white">
+        <color rgba="1 1 1 1"/>		
+    </material>
+
+    <material name="orange">
+		<color rgba="1 0.3 0.1 1"/>
+    </material>
+
+    <material name="blue">
+		<color rgba="0.2 0.2 1 1"/>
+    </material>
+
+    <material name="black">
+		<color rgba="0 0 0 1"/>
+    </material>
+	
+	<material name="red">
+		<color rgba="0.8 0.0 0.0 1"/>
+	</material>
+
+	<material name="green">
+		<color rgba="0.0 0.8 0.0 1"/>
+	</material>
+
+    <!-- BASE LINK -->
+
+    <link name="base_link" />
+	
+	<link name="unilidar_frame" />
+
+	<joint name="unilidar_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="unilidar_frame"/>
+		<origin xyz="-0.3 -0.3 1.0" rpy="0 1.570796 0"/>
+	</joint>
+	
+    <link name="unilidar_lidar">
+		<visual>
+			<origin xyz=" 0 0 0 " rpy="0 0 0" />
+			<geometry>
+				<mesh filename="package://sim_cartographer_unilidar_l1_ros2/mesh/L1.stl" scale="0.001 0.001 0.001"/>
+			</geometry>
+		</visual>
+	</link>
+    
+	<joint name="unilidar_lidar_joint" type="fixed">
+		<parent link="unilidar_frame"/>
+		<child link="unilidar_lidar"/>
+		<origin xyz="0.0 0.0 0.0445" rpy="0 0 0"/>
+	</joint>
+
+	<link name="unilidar_imu">
+		<visual>
+		  <geometry>
+			<box size="0.1 0.1 0.1"/>
+		  </geometry>
+		</visual>
+	</link>
+
+	<joint name="unilidar_imu_joint" type="fixed">
+		<parent link="unilidar_frame"/>
+		<child link="unilidar_imu"/>
+		<origin xyz="0.007698 0.014655 0.03783" rpy="0 0 0"/>
+	</joint>
+
+</robot>
