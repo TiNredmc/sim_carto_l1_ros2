@@ -12,7 +12,7 @@ find_package(xacro REQUIRED)
 
 
 install(
- DIRECTORY bag description param launch mesh
+ DIRECTORY bag description param launch mesh map
  DESTINATION share/${PROJECT_NAME}
 )
 
