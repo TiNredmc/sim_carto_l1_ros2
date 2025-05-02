@@ -16,3 +16,4 @@ Tuning
 Further tuning of the Cartographer can be made. First start from the correct URDF transform. Since Unitree didn't provide the coordinate of the imu and laser scan relative to the lidar base. I have to guess it from the Unitree fork of Point-LIO package.  
   
 Currently the Cartographer was tuned to have number of range data (submap.num_range_data) of 150. This can be reduced later in the localization mode or other scenarios. The global slam was tuned while running playback speed of x2. The result in the video is the REALTIME (running x1).
+[![Cartographer ros with Unitree 4D L1](https://img.youtube.com/vi/FdZ6XQt9f6c/0.jpg)](https://www.youtube.com/watch?v=FdZ6XQt9f6c)
