@@ -34,7 +34,7 @@ MAP_BUILDER.num_background_threads = 6
  
 MAP_BUILDER.use_trajectory_builder_3d = true  -- use 3D tranjectory builder
 TRAJECTORY_BUILDER_3D.num_accumulated_range_data = 1 -- No point cloud accumulation since one pointcloud2 message contains one revolution scan of the Unitree L1
-TRAJECTORY_BUILDER_3D.submaps.num_range_data = 150 -- 150
+TRAJECTORY_BUILDER_3D.submaps.num_range_data = 120 -- 150
 TRAJECTORY_BUILDER_3D.min_range = 0.1  -- ignore anything smaller than the robot radius, limiting it to the minimum scan range of the lidar
 TRAJECTORY_BUILDER_3D.max_range = 30.0  -- the maximum scanning range of the lidar
 
