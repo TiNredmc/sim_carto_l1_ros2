@@ -5,10 +5,21 @@ sim_carto_l1_ros2 is a ros2 package to launch the offcial Unitree's ros bag reco
 Launching
 =
 
-To launch the mapping, runs
+To launch the mapping
 ```
 ros2 launch sim_carto_l1_ros2 simbag.launch.py
 ```
+
+To generates the pbstream map which will be save at your home directory
+```
+ros2 service call /write_state cartographer_ros_msgs/srv/WriteState "{filename: l2.pbstream}"
+```
+
+To generates the PCD point cloud file, first copy your own pbstream map to replace one inside this package, colcon build then run
+```
+ros2 launch sim_carto_l1_ros2 assets_writer3d.launch.py
+```
+Point cloud output should be inside your home folder
 
 Tuning
 =
