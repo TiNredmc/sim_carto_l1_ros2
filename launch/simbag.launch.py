@@ -14,7 +14,7 @@ def generate_launch_description():
 
      # Specify the name of the package and path to xacro file within the package
     pkg_name = 'sim_carto_l1_ros2'
-    file_subpath = 'description/robot_r1.urdf.xacro'
+    file_subpath = 'description/robot.urdf'
     
     # Use xacro to process the file
     xacro_file = os.path.join(get_package_share_directory(pkg_name),file_subpath)
