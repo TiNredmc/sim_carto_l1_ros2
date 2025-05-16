@@ -21,7 +21,7 @@ def generate_launch_description():
     robot_description_raw = xacro.process_file(xacro_file).toxml()
     
     # Configure node launch information 
-    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     # Map resolution
     resolution = LaunchConfiguration('resolution', default='0.05')
     # Map publish period  
@@ -41,7 +41,7 @@ def generate_launch_description():
 
     # ROS2 bag
     ros2_bag_instant = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'bag', 'play', '--rate', '1.0', os.path.join(get_package_share_directory(pkg_name), 'bag', )],
+        cmd=['ros2', 'bag', 'play', '--rate', '2.0', os.path.join(get_package_share_directory(pkg_name), 'bag', )],
         output='screen',
     )
     
