@@ -37,7 +37,7 @@ def generate_launch_description():
     cartographer_node = Node(
         package = 'cartographer_ros',
         executable = 'cartographer_assets_writer',
-        parameters = [{'use_sim_time': False}],
+        parameters = [{'use_sim_time': True}],
         arguments = [
             '-configuration_directory', LaunchConfiguration('configuration_directory'),
             '-configuration_basename', LaunchConfiguration('config_file'),
