@@ -75,15 +75,15 @@ POSE_GRAPH.log_residual_histograms  = false
 POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1.1e3 -- last good 1.1e3
 -- POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 5e5
 
--- POSE_GRAPH.constraint_builder.sampling_ratio = 1.0
+POSE_GRAPH.constraint_builder.sampling_ratio = 0.4 -- 0.6
 -- POSE_GRAPH.constraint_builder.max_constraint_distance = 45.0
-POSE_GRAPH.constraint_builder.min_score = 0.52  -- 0.52
-POSE_GRAPH.constraint_builder.global_localization_min_score = 0.55 -- 0.65
+POSE_GRAPH.constraint_builder.min_score = 0.47  -- 0.52
+POSE_GRAPH.constraint_builder.global_localization_min_score = 0.55 -- 0.55
 
 -- POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher_3d.branch_and_bound_depth = 16
 -- POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher_3d.min_low_resolution_score = 0.50
 -- POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher_3d.min_rotational_score = 0.50
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher_3d.linear_xy_search_window = 2.5
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher_3d.linear_xy_search_window = 5.0 -- 2.5
 -- POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher_3d.linear_z_search_window = 1.0
 -- POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher_3d.angular_search_window = math.rad(180.)
 
