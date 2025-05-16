@@ -41,7 +41,7 @@ def generate_launch_description():
 
     # ROS2 bag
     ros2_bag_instant = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'bag', 'play', '--rate', '2.0', os.path.join(get_package_share_directory(pkg_name), 'bag', )],
+        cmd=['ros2', 'bag', 'play', '--rate', '3.0', os.path.join(get_package_share_directory(pkg_name), 'bag', )],
         output='screen',
     )
     
