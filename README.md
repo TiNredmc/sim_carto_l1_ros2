@@ -21,6 +21,11 @@ ros2 launch sim_carto_l1_ros2 assets_writer3d.launch.py
 ```
 Point cloud output should be inside your home folder
 
+To run the localization
+```
+ros2 launch sim_carto_l1_ros2 simlocalizebag.launch.py
+```
+
 Tuning Guide
 =
 
