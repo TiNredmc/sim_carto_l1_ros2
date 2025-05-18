@@ -24,7 +24,7 @@ POSE_GRAPH.constraint_builder.ceres_scan_matcher_3d.ceres_solver_options.num_thr
 
 -- POSE_GRAPH.optimization_problem.huber_scale = 5e2
 POSE_GRAPH.optimization_problem.acceleration_weight = 1e-2 -- Accelerometer noise causing jump in RPY estimation, turning this down helps a lot.
-POSE_GRAPH.optimization_problem.rotation_weight = 1.6e-2 -- Gyro causing Z axis drift because of small introduction of pitch angle. turning this down helps a lot.
+POSE_GRAPH.optimization_problem.rotation_weight = 1.6e-3 -- Gyro causing Z axis drift because of small introduction of pitch angle. turning this down helps a lot.
 
 -- POSE_GRAPH.global_constraint_search_after_n_seconds = 5
 -- POSE_GRAPH.max_num_final_iterations = 50
