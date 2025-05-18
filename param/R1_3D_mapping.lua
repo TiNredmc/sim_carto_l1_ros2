@@ -67,8 +67,6 @@ POSE_GRAPH.optimize_every_n_nodes = 10 -- 5
 
 -- POSE_GRAPH.global_sampling_ratio = 0.05
 
-POSE_GRAPH.log_residual_histograms  = false
-
 -- Non-loop closure constraints
 -- POSE_GRAPH.matcher_translation_weight = 5e2 -- default 5e2 
 -- POSE_GRAPH.matcher_rotation_weight = 5e3 -- default 0.825e8
@@ -101,5 +99,10 @@ POSE_GRAPH.optimization_problem.ceres_solver_options.max_num_iterations = 20
 -- POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1e10
 POSE_GRAPH.global_constraint_search_after_n_seconds = 3
 -- POSE_GRAPH.max_num_final_iterations = 50
+
+-- Logging
+POSE_GRAPH.log_residual_histograms = false
+POSE_GRAPH.constraint_builder.log_matches = false
+POSE_GRAPH.optimization_problem.log_solver_summary = true
 
 return options
